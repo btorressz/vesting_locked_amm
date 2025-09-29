@@ -42,4 +42,26 @@ The **Vesting Locked AMM** addresses liquidity instability in DeFi protocols. Ra
 
 ---
 
+### 🏗️ Core Functions
+
+#### 🔧 Pool Management
+
+- `initialize_pool`: Sets up pool and configures fees.
+- `pause / unpause`: Emergency trading halt switches.
+- `emergency_withdraw`: Authority drains reserves during crises.
+
+#### 💼 Liquidity Operations
+
+- `deposit_and_vest`: Users deposit tokens & lock LP tokens.
+- `claim_vested`: Withdraws LP + rewards after vesting ends.
+- `early_unvest`: Early withdrawal with treasury penalty.
+- `withdraw_unlocked`: Burns LP tokens to return Token A & B.
+
+#### 🔁 Trading
+
+- `swap`: Performs token swaps using `x*y=k` formula with fees.
+
+---
+
+
 
