@@ -104,4 +104,40 @@ Tracks each user's vesting:
 
 ---
 
+### ⚠️ Error Handling
+
+- `InvalidVestingPeriod`
+- `NumericOverflow`
+- `InsufficientLiquidity`
+- `VestingNotFinished`
+- `AlreadyClaimed`
+- `SlippageExceeded`
+- `Paused`
+- `InvalidFeeSplit`
+
+---
+
+### 🔧 Technical Implementation
+
+#### 🔐 Security
+
+- **PDA Authority** for pool control
+- **Rent Checks** for all token accounts
+- **Ownership Validation** for SPL accounts
+- **Overflow Protection** throughout
+
+#### 💸 Fee Mechanism
+
+- Collected on swaps
+- Split into treasury + rewards
+- Residual stays in reserves
+
+#### 🎁 Reward Accounting
+
+- **Global:** `acc_reward_per_lp`
+- **User:** `reward_debt`
+- **Pending:** `rewards = (amount * acc) - debt`
+
+---
+
 
