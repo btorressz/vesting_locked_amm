@@ -63,5 +63,45 @@ The **Vesting Locked AMM** addresses liquidity instability in DeFi protocols. Ra
 
 ---
 
+### 📊 Core Data Structures
+
+#### 📦 Pool Account
+
+Contains:
+
+- `authority`: Admin with emergency controls
+- `token_a_mint`, `token_b_mint`
+- `lp_mint`: LP token mint
+- `reserve_a`, `reserve_b`: Reserve accounts
+- `protocol_fee_bps`, `treasury_fee_bps`, `reward_fee_bps`
+- `vesting_nonce`: Vesting ID counter
+- `paused`: Trading status
+- `acc_reward_per_lp`: Global rewards tracker
+
+#### 📄 VestingStake Account
+
+Tracks each user's vesting:
+
+- `pool`, `user`
+- `amount`: Locked LP tokens
+- `vesting_end`: Vesting end timestamp
+- `claimed`: Boolean
+- `deposit_id`: Unique ID
+- `reward_debt`: Reward baseline
+
+---
+
+### 🧾 Events
+
+- `PoolInitialized`
+- `Deposited`
+- `Claimed`
+- `EarlyUnvested`
+- `Withdrawn`
+- `Swapped`
+- `Paused / Unpaused`
+- `EmergencyWithdrawn`
+
+---
 
 
