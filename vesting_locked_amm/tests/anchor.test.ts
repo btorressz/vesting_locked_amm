@@ -8,6 +8,8 @@ vesting_locked_amm - initialize / pause / unpause
      TypeError: Failed to fetch
 
 */
+//This is solana playground version that is why it is named anchor.test.ts in vscode version it is // test/vesting_locked_amm.ts
+
 import * as anchor from "@coral-xyz/anchor";
 import { Program } from "@coral-xyz/anchor";
 import { PublicKey, SystemProgram, Keypair, Connection } from "@solana/web3.js";
